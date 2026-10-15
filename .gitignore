@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+*/node_modules/
+package-lock.json
+
+# Python Virtual Environments & Cache
+venv/
+*/venv/
+__pycache__/
+*/__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment Variables & Secrets
+.env
+*/.env
+!.env.example
+!*/.env.example
+
+# Build Artifacts
+dist/
+*/dist/
+build/
+*/build/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini

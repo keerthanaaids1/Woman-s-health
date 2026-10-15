@@ -1,0 +1,352 @@
+/* AURA CARE SANCTUARY - LUXURY BLUSH PINK & VELVET CRIMSON PALETTE */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-gradient: radial-gradient(circle at 10% 20%, #FFF5F7 0%, #FFE8EC 40%, #FFD6DE 90%);
+  --crimson-deep: #590D22;
+  --crimson-velvet: #800F2F;
+  --crimson-rich: #A4133C;
+  --ruby-light: #C9184A;
+  --rose-accent: #FF4D6D;
+  --blush-card: rgba(255, 255, 255, 0.88);
+  --blush-soft: #FFF0F3;
+  --blush-tint: #FFCCD5;
+  --gold-accent: #D4AF37;
+  --gold-soft: #FFF8E7;
+  --text-main: #2A0812;
+  --text-muted: #6B3E49;
+  --text-light: #8E5B67;
+  --border-glass: rgba(164, 19, 60, 0.16);
+  --shadow-luxury: 0 16px 40px -10px rgba(128, 15, 47, 0.12), 0 4px 12px -2px rgba(89, 13, 34, 0.08);
+  --shadow-glow: 0 0 25px rgba(255, 77, 109, 0.25);
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* App container */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Luxury Header */
+.sanctuary-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 245, 247, 0.85);
+  border-bottom: 1px solid var(--border-glass);
+  padding: 0.9rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(128, 15, 47, 0.04);
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  cursor: pointer;
+}
+
+.brand-emblem {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--crimson-rich) 0%, var(--crimson-deep) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: var(--shadow-glow);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.brand-text h1 {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--crimson-deep);
+  line-height: 1.1;
+}
+
+.brand-text p {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--crimson-rich);
+  font-weight: 600;
+}
+
+/* Nav tabs */
+.nav-links {
+  display: flex;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.3rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-glass);
+}
+
+.nav-pill {
+  border: none;
+  background: transparent;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.nav-pill:hover {
+  color: var(--crimson-rich);
+  background: rgba(255, 204, 213, 0.4);
+}
+
+.nav-pill.active {
+  background: linear-gradient(135deg, var(--crimson-velvet) 0%, var(--crimson-deep) 100%);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(128, 15, 47, 0.3);
+}
+
+/* Glass Cards */
+.glass-panel {
+  background: var(--blush-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: var(--shadow-luxury);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass-panel:hover {
+  box-shadow: 0 20px 45px -10px rgba(128, 15, 47, 0.18);
+}
+
+/* Luxury buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--ruby-light) 0%, var(--crimson-deep) 100%);
+  color: #fff;
+  border: none;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 18px rgba(164, 19, 60, 0.32);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(164, 19, 60, 0.42);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--crimson-deep);
+  border: 1px solid var(--border-glass);
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #FFF0F3;
+  border-color: var(--ruby-light);
+}
+
+/* Badges */
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.badge-blush {
+  background: #FFE5EC;
+  color: var(--crimson-velvet);
+  border: 1px solid rgba(164, 19, 60, 0.2);
+}
+
+.badge-emergency {
+  background: #FFD8D8;
+  color: #990000;
+  border: 1px solid #FF8080;
+  animation: pulse-border 1.5s infinite;
+}
+
+.badge-success {
+  background: #E8F5E9;
+  color: #1B5E20;
+  border: 1px solid #A5D6A7;
+}
+
+/* 4-7-8 Somatic Breathing Pacer Animation */
+.breathing-orb-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.breathing-orb {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFCCD5 0%, #FF4D6D 60%, #800F2F 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-align: center;
+  box-shadow: 0 0 50px rgba(255, 77, 109, 0.4);
+  transition: transform 1s ease-in-out;
+}
+
+.breathing-orb.inhale {
+  transform: scale(1.35);
+  box-shadow: 0 0 70px rgba(255, 77, 109, 0.65);
+}
+
+.breathing-orb.hold {
+  transform: scale(1.35);
+  box-shadow: 0 0 85px rgba(212, 175, 55, 0.7);
+  border: 4px solid var(--gold-accent);
+}
+
+.breathing-orb.exhale {
+  transform: scale(0.9);
+  box-shadow: 0 0 30px rgba(128, 15, 47, 0.3);
+}
+
+@keyframes pulse-border {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+/* Live Agent swarm monitor bar */
+.agent-ticker {
+  background: rgba(89, 13, 34, 0.05);
+  border: 1px dashed var(--border-glass);
+  border-radius: 16px;
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.agent-chip {
+  background: #fff;
+  border: 1px solid var(--border-glass);
+  border-radius: 10px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 600;
+  color: var(--crimson-deep);
+}
+
+.agent-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 6px #10B981;
+}
+
+/* Hackathon demo tester ribbon */
+.demo-ribbon {
+  background: linear-gradient(90deg, #590D22 0%, #800F2F 50%, #590D22 100%);
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.demo-btn-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.demo-btn {
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.demo-btn:hover {
+  background: #FF4D6D;
+  border-color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sanctuary-nav {
+    padding: 0.8rem 1rem;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
